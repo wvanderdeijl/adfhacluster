@@ -1,7 +1,9 @@
 package com.redheap.hacluster;
 
+import java.io.Serializable;
 
-public class Employee {
+
+public class Employee implements Serializable {
 
     private int id;
     private String name;

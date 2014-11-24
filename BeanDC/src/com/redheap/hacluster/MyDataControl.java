@@ -40,15 +40,24 @@ public class MyDataControl {
     }
 
     public Serializable createSnapshot() {
-        System.out.println("** createSnapshot");
         List state = new ArrayList(2);
         state.add(simpleList);
         state.add(paramList);
+        System.out.println("** createSnapshot " + state);
         return (Serializable) state;
     }
 
     public void restoreSnapshot(Serializable handle) {
         System.out.println("** restoreSnapshot " + handle);
+        List state = (List) handle;
+        if (state == null) {
+            System.out.println("**** no state to restore???");
+        } else {
+            this.simpleList = (List<Employee>) state.get(0);
+            System.out.println("**** restored simpleList " + this.simpleList);
+            this.paramList = (List<Employee>) state.get(1);
+            System.out.println("**** restored paramList " + this.paramList);
+        }
     }
 
     public void removeSnapshot(Serializable handle) {

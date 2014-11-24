@@ -3,6 +3,8 @@
                   xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.5/weblogic-web-app.xsd"
                   xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app">
   <session-descriptor>
-    <persistent-store-type>REPLICATED_IF_CLUSTERED</persistent-store-type>
+    <cache-size>0</cache-size>
+    <persistent-store-type>FILE</persistent-store-type>
+    <persistent-store-dir>C:/work/wlssessions</persistent-store-dir>
   </session-descriptor>
 </weblogic-web-app>
