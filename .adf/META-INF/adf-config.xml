@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adf-config xmlns="http://xmlns.oracle.com/adf/config" xmlns:adf="http://xmlns.oracle.com/adf/config/properties">
+  <adf:adf-properties-child xmlns="http://xmlns.oracle.com/adf/config/properties">
+    <adf-property name="adfAppUID" value="HACluster.com.redheap.hacluster"/>
+  </adf:adf-properties-child>
+</adf-config>
