@@ -12,4 +12,7 @@
       </amconfig-overrides>
     </startup>
   </adf-adfm-config>
+  <adf-controller-config xmlns="http://xmlns.oracle.com/adf/controller/config">
+    <adf-scope-ha-support>true</adf-scope-ha-support>
+  </adf-controller-config>
 </adf-config>
