@@ -86,6 +86,7 @@
       <hash n="runConfigurationDefinitions">
          <hash n="Default">
             <value n="custom" v="false"/>
+            <value n="javaOptions" v="-Djbo.passivationstore=file -Djbo.tmpdir=c:/work/wlssessions/ -Djbo.dofailover=true"/>
             <value n="name" v="Default"/>
             <hash n="oracle.adfdt.controller.adfc.source.runner.AdfcRunnerLaunchSettings">
                <value n="viewActivityId" v="simple"/>
