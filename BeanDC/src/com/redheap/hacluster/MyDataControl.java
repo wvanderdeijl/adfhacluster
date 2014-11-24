@@ -40,12 +40,18 @@ public class MyDataControl {
     }
 
     public Serializable createSnapshot() {
-        return null;
+        System.out.println("** createSnapshot");
+        List state = new ArrayList(2);
+        state.add(simpleList);
+        state.add(paramList);
+        return (Serializable) state;
     }
 
-    public void restoreSnapshot(Serializable p0) {
+    public void restoreSnapshot(Serializable handle) {
+        System.out.println("** restoreSnapshot " + handle);
     }
 
-    public void removeSnapshot(Serializable p0) {
+    public void removeSnapshot(Serializable handle) {
+        System.out.println("** removeSnapshot " + handle);
     }
 }
