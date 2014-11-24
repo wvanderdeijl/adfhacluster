@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">simple</property>
+      <property
+         name="page">/simple.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>simple&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">188.29883</property>
+      <property
+         name="x">273.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">params</property>
+      <property
+         name="page">/params.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>params&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">186.29883</property>
+      <property
+         name="x">566.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">goParams</property>
+      <property
+         name="sdm:polyPoints">R50,314.0,187.94824,525.0,185.94824,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">goSimple</property>
+      <property
+         name="sdm:polyPoints">L54,525.0,189.44824,314.03317,191.44824,R54</property>
+   </ControlFlowCase>
+</SDM>

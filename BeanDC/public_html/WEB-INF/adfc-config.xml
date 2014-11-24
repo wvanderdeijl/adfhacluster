@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2"></adfc-config>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="simple">
+    <page>/simple.jsf</page>
+  </view>
+  <view id="params">
+    <page>/params.jsf</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id>simple</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>goParams</from-outcome>
+      <to-activity-id>params</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__3">
+    <from-activity-id>params</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome>goSimple</from-outcome>
+      <to-activity-id>simple</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>

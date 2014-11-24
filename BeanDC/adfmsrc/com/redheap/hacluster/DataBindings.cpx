@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.10.8" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.redheap.hacluster" ClientType="Generic">
+  <pageMap>
+    <page path="/simple.jsf" usageId="com_redheap_hacluster_simplePageDef"/>
+    <page path="/params.jsf" usageId="com_redheap_hacluster_paramsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_redheap_hacluster_simplePageDef" path="com.redheap.hacluster.pageDefs.simplePageDef"/>
+    <page id="com_redheap_hacluster_paramsPageDef" path="com.redheap.hacluster.pageDefs.paramsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="MyDataControl" path="com.redheap.hacluster.MyDataControl"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="simplePageDef"
+                Package="com.redheap.hacluster.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="MyDataControl" id="MyDataControlIterator"/>
+    <accessorIterator MasterBinding="MyDataControlIterator" Binds="employees" RangeSize="25" DataControl="MyDataControl"
+                      BeanClass="com.redheap.hacluster.Employee" id="employeesIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="employeesIterator" id="id">
+      <AttrNames>
+        <Item Value="id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="employeesIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="employeesIterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="employeesIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="employeesIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="employeesIterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

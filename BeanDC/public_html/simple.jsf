@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="simple.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:button text="go to page with param fetch" id="b1" action="goParams"/>
+            <af:panelFormLayout id="pfl1">
+                <af:inputText value="#{bindings.id.inputValue}" label="#{bindings.id.hints.label}" id="it1"/>
+                <af:inputText value="#{bindings.name.inputValue}" label="#{bindings.name.hints.label}" id="it2"/>
+                <f:facet name="footer">
+                    <af:panelGroupLayout layout="vertical" id="pgl1">
+                        <af:panelGroupLayout layout="horizontal" id="pgl2">
+                            <af:button actionListener="#{bindings.First.execute}" text="First" id="b2"/>
+                            <af:button actionListener="#{bindings.Previous.execute}" text="Previous" id="b3"/>
+                            <af:button actionListener="#{bindings.Next.execute}" text="Next" id="b4"/>
+                            <af:button actionListener="#{bindings.Last.execute}" text="Last" id="b5"/>
+                        </af:panelGroupLayout>
+                        <af:button text="Submit" id="b6"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelFormLayout>
+        </af:form>
+    </af:document>
+</f:view>

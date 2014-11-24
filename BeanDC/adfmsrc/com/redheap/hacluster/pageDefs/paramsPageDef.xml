@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="paramsPageDef"
+                Package="com.redheap.hacluster.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="fetchEmployees_prefix" IsQueriable="false"/>
+    </variableIterator>
+    <methodIterator Binds="fetchEmployees.result" DataControl="MyDataControl" RangeSize="25"
+                    BeanClass="com.redheap.hacluster.Employee" id="fetchEmployeesIterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <methodAction id="fetchEmployees" RequiresUpdateModel="true" Action="invokeMethod" MethodName="fetchEmployees"
+                  IsViewObjectMethod="false" DataControl="MyDataControl" InstanceName="data.MyDataControl.dataProvider"
+                  ReturnName="data.MyDataControl.methodResults.fetchEmployees_MyDataControl_dataProvider_fetchEmployees_result">
+      <NamedData NDName="prefix" NDType="java.lang.String" NDValue="${bindings.fetchEmployees_prefix}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="prefix">
+      <AttrNames>
+        <Item Value="fetchEmployees_prefix"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fetchEmployeesIterator" id="id">
+      <AttrNames>
+        <Item Value="id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fetchEmployeesIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="fetchEmployeesIterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="fetchEmployeesIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="fetchEmployeesIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="fetchEmployeesIterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>
